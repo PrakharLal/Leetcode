@@ -1,0 +1,17 @@
+// Title: Shuffle the Array
+            // Difficulty: Easy
+            // Language: Java
+            // Link: https://leetcode.com/problems/shuffle-the-array/
+
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+     int[] ans = new int[2 * n];
+
+        for (int i = 0; i < n; i++) {
+            ans[2 * i] = nums[i];        // x
+            ans[2 * i + 1] = nums[i+n];  // y
+        }
+
+        return ans;
+    }
+}
