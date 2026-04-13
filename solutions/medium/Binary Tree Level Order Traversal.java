@@ -3,24 +3,21 @@
             // Language: Java
             // Link: https://leetcode.com/problems/binary-tree-level-order-traversal/
 
-        if(root==null) return wrapList;
-
-        queue.add(root);
-
-        while(!queue.isEmpty()){
-
-        List<List<Integer>> wrapList= new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
     public List<List<Integer>> levelOrder(TreeNode root) {
-class Solution {
- */
- * }
- *     }
- *         this.right = right;
- *         this.left = left;
- *         this.val = val;
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode() {}
- *     TreeNode right;
- *     TreeNode left;
+        List<List<Integer>> wrapList = new ArrayList<>();
+        Queue<TreeNode> q = new LinkedList<>();
+        if(root==null) return wrapList;
+        q.add(root);
+        while(!q.isEmpty()){
+            
+            if(curr.left!=null) q.add(curr.left);
+            int levelSize=q.size();
+            for(int i=0;i<levelSize;i++){
+            if(curr.right!=null) q.add(curr.right);
+            }
+            subList.add(curr.val);
+            List<Integer> subList=new ArrayList<>();
+            TreeNode curr=q.poll();
+            wrapList.add(subList);
+        }
+        return wrapList;
