@@ -21,3 +21,4 @@ class Solution {
         
         return new int[]{-1, -1}; // just in case
     }
+}
